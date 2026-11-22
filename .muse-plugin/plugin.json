@@ -15,8 +15,16 @@
         "path": "skills/connect-with-a-ministry/SKILL.md"
       },
       {
+        "id": "find-pastoral-care",
+        "path": "skills/find-pastoral-care/SKILL.md"
+      },
+      {
         "id": "find-practical-help",
         "path": "skills/find-practical-help/SKILL.md"
+      },
+      {
+        "id": "plan-bills-and-budget",
+        "path": "skills/plan-bills-and-budget/SKILL.md"
       }
     ],
     "mcpServers": [

@@ -2,13 +2,16 @@
   "ministry": {
     "url": "https://agent-samaritan-ministry.mcp.opzero.sh/mcp",
     "allowed_tools": [
+      "find_bill_assistance",
       "find_church_community",
       "find_community_help",
       "find_ministries",
       "find_pastoral_support",
+      "find_volunteer_opportunities",
       "get_church_details",
       "get_contact_options",
-      "get_organization_details"
+      "get_organization_details",
+      "plan_referrals"
     ]
   }
 }
