@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^mcp__plugin_agent-samaritan-ministry_ministry__prepare_ministry_introduction$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/introduction-receipt.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-samaritan-ministry",
+  "version": "1.0.0",
+  "description": "Find a church community, reach a pastoral care team, volunteer locally, or find a ministry that can help with a practical need.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin",
+  "repository": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Agent Samaritan: Ministry",
+        "shortDescription": "Find a local ministry",
+        "longDescription": "Find a church community, reach a pastoral care team, volunteer locally, or find a ministry that can help with a practical need.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin",
+        "privacyPolicyURL": "https://opzero.sh/privacy",
+        "supportURL": "https://opzero.sh/support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

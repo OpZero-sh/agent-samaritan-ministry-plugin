@@ -1,0 +1,18 @@
+{
+  "name": "agent-samaritan-ministry",
+  "displayName": "Agent Samaritan: Ministry",
+  "version": "1.0.0",
+  "description": "Find a church community, reach a pastoral care team, volunteer locally, or find a ministry that can help with a practical need.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "repository": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin",
+  "homepage": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin",
+  "documentationUrl": "https://github.com/OpZero-sh/agent-samaritan-ministry-plugin#readme",
+  "privacyPolicyUrl": "https://opzero.sh/privacy",
+  "supportUrl": "https://opzero.sh/support",
+  "termsOfServiceUrl": "https://opzero.sh/terms",
+  "icon": "./assets/icon.png",
+  "license": "LicenseRef-OpZero-Plugin"
+}

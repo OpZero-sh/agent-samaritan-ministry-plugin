@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ministry": {
+      "type": "http",
+      "url": "https://agent-samaritan-ministry.mcp.opzero.sh/mcp"
+    }
+  }
+}

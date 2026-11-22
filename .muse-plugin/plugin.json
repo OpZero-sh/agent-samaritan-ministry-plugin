@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "name": "agent-samaritan-ministry",
+  "version": "1.0.0",
+  "displayName": "Agent Samaritan: Ministry",
+  "description": "Find a church community, reach a pastoral care team, volunteer locally, or find a ministry that can help with a practical need.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "connect-with-a-ministry",
+        "path": "skills/connect-with-a-ministry/SKILL.md"
+      },
+      {
+        "id": "find-practical-help",
+        "path": "skills/find-practical-help/SKILL.md"
+      }
+    ],
+    "mcpServers": [
+      {
+        "id": "ministry",
+        "transport": "http",
+        "url": "https://agent-samaritan-ministry.mcp.opzero.sh/mcp"
+      }
+    ]
+  }
+}
