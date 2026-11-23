@@ -33,9 +33,9 @@ Each skill folder has a `references` folder with notes on data sources, result f
 
 `care-contact-researcher` is a read only helper. Claude can hand it a shortlist to check. It opens each record and reports the published contact and its role, the service area, eligibility, cost and source dates, and what the record leaves unknown. It can use the search and detail tools only. It cannot prepare introductions or worksheets.
 
-### Hook
+### Hooks
 
-One `PostToolUse` hook runs after the `prepare_ministry_introduction` tool returns. It runs `hooks/introduction-receipt.sh`, a short shell script that prints one fixed reminder for Claude: present the introduction as an unsent draft, keep the published contact labels, and do not ask for identity details in order to show it. The script does not read the tool result, write to disk or use the network.
+None. This plugin has no hooks and runs no code on your machine. The skills tell Claude to present an introduction as an unsent draft with the contact's published label.
 
 ## Get started
 
@@ -50,14 +50,14 @@ In Claude chat or Cowork, open the installed plugin's Connectors tab and connect
 
 ## What the plugin runs, sends and fetches
 
-- **One remote MCP server.** The plugin connects to `https://agent-samaritan-ministry.mcp.opzero.sh/mcp`, run by OpZero. It is declared in `.mcp.json` and under `network.hosts` in the plugin manifest. It needs no sign in. The plugin contacts no other host.
+- **One remote MCP server.** The plugin connects to `https://agent-samaritan-ministry.mcp.opzero.sh/mcp`, run by OpZero. It is declared in `.mcp.json`. It needs no sign in. The plugin contacts no other host.
 - **What a search sends.** The approximate place you give (ZIP, city and state, or city and country), the kind of need, and optional filters such as provider faith preference, free only and radius. Detail and introduction tools send an organization ID and a topic. No name, phone number or email is requested.
 - **Worksheets.** If you fill a worksheet in the widget, you type your entries there yourself. If you ask Claude to prefill or export a worksheet, the entries you chose to share are sent to the server to build the PDF.
 - **What the server looks up.** The hosted service queries public directories and returns the source with every result. Sources named in results include OpenStreetMap, Feed America, HUD housing counseling data, the HHS LIHEAP Clearinghouse and CFPB worksheets, plus a ZIP or place name lookup.
-- **One hook script.** `hooks/introduction-receipt.sh`, described above. It is the only code the plugin runs on your machine.
-- **Optional developer files, never run by the plugin.**
-  - `scripts/build_openai.py` builds a ZIP of this plugin for ChatGPT and Codex when you run it yourself. It reads the skills, the license, the plugin icon and the files in `integrations/openai`, and writes ZIP files to the folder you name. It makes no network request.
-  - `integrations/grok_example.py` is a sample for the xAI API. With `--dry-run` it only prints the request. Without it, it reads `XAI_API_KEY` (and the optional model name `XAI_MODEL`) from your environment and sends your question and the server list in `integrations/grok-servers.json` to `https://api.x.ai/v1/responses`. This happens only when you run the script yourself.
+- **No hooks and no local code.** The plugin holds skills, one agent and the connector declaration.
+- **Optional developer files, never run by the plugin.** The two helper scripts are not in this repository. They live in the catalog repository, https://github.com/OpZero-sh/plugins, and do something only if you clone it and run them yourself.
+  - `tools/build_openai.py` in the catalog builds a ZIP of this plugin for ChatGPT and Codex. It reads the skills, the license, the plugin icon and the files in `integrations/openai`, and writes ZIP files to the folder you name. It makes no network request.
+  - `tools/grok_example.py` in the catalog is a sample for the xAI API. With `--dry-run` it only prints the request. Without it, it reads `XAI_API_KEY` (and the optional model name `XAI_MODEL`) from your environment and sends your question and the server list in `integrations/grok-servers.json` to `https://api.x.ai/v1/responses`.
   - `.muse-plugin/plugin.json`, `integrations/openai/plugin.json` and `integrations/openai/mcp.json` are manifests for other clients. They name the same server.
 
 ## Limits and urgent help
@@ -72,4 +72,4 @@ Examples from the connected services in Claude.
 
 ![A community assistance referral with its service area](media/community-help.webp)
 
-[Watch a short example in ChatGPT](media/community-referrals.mp4). The clip shows a food pantry lookup and follow up questions about nearby ministries using public directory information.
+[Watch a short example in ChatGPT](https://github.com/OpZero-sh/plugins/blob/main/media/agent-samaritan-ministry/community-referrals.mp4). The clip shows a food pantry lookup and follow up questions about nearby ministries using public directory information.
