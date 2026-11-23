@@ -36,9 +36,9 @@ If two topics fit, ask the person which one the note should be about.
 - Keep requests modest and concrete, for example asking when to visit or who coordinates volunteers.
 - Do not promise on the organization's behalf. The draft asks. It does not confirm a place, a visit or a role.
 
-## The plugin's reminder
+## After the tool returns
 
-In Claude Code this plugin runs a short local script after `prepare_ministry_introduction` returns. It adds a reminder to the conversation: present the introduction as an unsent draft, keep the published contact labels, and do not ask for identity details in order to show it. The script reads nothing and sends nothing.
+Nothing else adds a reminder when `prepare_ministry_introduction` returns, so apply these three rules yourself each time: present the introduction as an unsent draft, keep the published contact labels, and do not ask for identity details in order to show it.
 
 ## What was and was not verified
 
